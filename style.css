@@ -1,0 +1,113 @@
+.container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .cube {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      padding: 90pxpx;
+      transform-style: preserve-3d;
+      transform: rotateX(-30deg) rotateY(-45deg);
+      animation: spin 23s infinite linear;
+    }
+     img{
+    	width: 100px;
+    	height: 100px;
+    }
+
+    .face {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(0, 0, 255, 0.2);
+      border: 2px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .front  { transform: translateZ(50px); }
+    .back   { transform: rotateY(180deg) translateZ(50px); }
+    .right  { transform: rotateY(90deg) translateZ(50px); }
+    .left   { transform: rotateY(-90deg) translateZ(50px); }
+    .top    { transform: rotateX(90deg) translateZ(50px); }
+    .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+    @keyframes spin {
+      from { transform: rotateX(-30deg) rotateY(-45deg); }
+      to   { transform: rotateX(-30deg) rotateY(315deg); }
+    }
+.profile-picture{
+	width: 200px;
+	height: 200px;
+	border-radius: 50px;
+	overflow: hidden;
+	box-shadow: 0 0 20px  #4ECDC4, 0 0 40px #349090;
+	animation: glow-border 1.5s infinite alternate;
+}
+body{
+	background-color: #240e00;
+	color: white;
+	font-family: sans-serif;
+	margin-left: 120px;
+	margin-right: 120px;
+}
+.container{
+	display: grid;
+	width: 200px;
+	height: 200px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: repeat(3, 1fr);
+	gap: 20px;
+	padding: 30px;
+}
+
+
+div img{
+	width: 200px;
+	height: 200px;
+}
+header{
+	color: white;
+	padding: 25px;
+	text-align: center;
+}
+header h1{
+	font-size: 2.5em;
+	margin-bottom: 10px;
+}
+header p{
+	font-size: 1.2em;
+}
+nav ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+nav ul li{
+	margin: 0 15px;
+}
+nav ul li a{
+	color: #eb2414;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color o.3s;
+}
+nav ul li a:hover{
+	color: #0be1f4;
+}
+nav a img{
+	width: 80px;
+	height: 80px;
+	padding: 10px;
+}
+ button:hover{
+    color:#dc7e23;
+}
